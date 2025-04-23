@@ -1,8 +1,8 @@
-const MovieList = [
+const movieList = [
     "The Shawshank Redemption",
     "The Godfather",
     "The Dark Knight",
-    "Pulp Fiction", 
+    "Pulp Fiction",
     "Forrest Gump",
     "Inception",
     "Fight Club",
@@ -103,5 +103,6 @@ const MovieList = [
     "Glass Onion",
     "The Last Duel",
   ];
-
-  export default MovieList;
+  
+  export default movieList;
+  
