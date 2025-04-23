@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddMovieForm = () => {
-  // Individual state variables
   const [title, setTitle] = useState('');
   const [genre, setGenre] = useState('');
   const [time, setTime] = useState('');
@@ -11,7 +10,7 @@ const AddMovieForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validation
+    // Separate validation for each field
     if (!title.trim()) {
       toast.error('Please enter a movie title');
       return;
@@ -38,25 +37,25 @@ const AddMovieForm = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to add movie');
+        throw new Error(errorData.message || 'Failed to add movie. Server responded with an error.');
       }
 
       toast.success('Movie added successfully!');
-      // Reset form
       setTitle('');
       setGenre('');
       setTime('');
     } catch (error) {
-      toast.error(error.message || 'An error occurred while adding the movie');
-      console.error('Error:', error);
+      toast.error(error.message || 'An unexpected error occurred while adding the movie');
+      console.error('Submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Add New Movie</h2>
+    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <Toaster position="top-center" />
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Add Movie</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="title" className="block text-gray-700 font-medium mb-2">
@@ -68,9 +67,9 @@ const AddMovieForm = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             className="w-full px-4 py-2 border border-gray-300 rounded-md 
-                      focus:outline-none focus:ring-2 focus:ring-blue-500 
+                      focus:outline-none focus:ring-2 focus:ring-black 
                       transition duration-200"
-            placeholder="Enter movie title"
+            placeholder="e.g. Inception"
             disabled={isSubmitting}
           />
         </div>
@@ -85,24 +84,24 @@ const AddMovieForm = () => {
             value={genre}
             onChange={(e) => setGenre(e.target.value)}
             className="w-full px-4 py-2 border border-gray-300 rounded-md 
-                      focus:outline-none focus:ring-2 focus:ring-blue-500 
+                      focus:outline-none focus:ring-2 focus:ring-black 
                       transition duration-200"
-            placeholder="Enter movie genre"
+            placeholder="e.g. Sci-Fi"
             disabled={isSubmitting}
           />
         </div>
         
         <div className="mb-6">
           <label htmlFor="time" className="block text-gray-700 font-medium mb-2">
-            Show Time
+            Time
           </label>
           <input
-            type="datetime-local"
+            type="time"
             id="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
             className="w-full px-4 py-2 border border-gray-300 rounded-md 
-                      focus:outline-none focus:ring-2 focus:ring-blue-500 
+                      focus:outline-none focus:ring-2 focus:ring-black 
                       transition duration-200"
             disabled={isSubmitting}
           />
@@ -112,7 +111,7 @@ const AddMovieForm = () => {
           type="submit"
           disabled={isSubmitting}
           className={`w-full py-2 px-4 rounded-md text-white font-medium 
-                    ${isSubmitting ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'} 
+                    ${isSubmitting ? 'bg-gray-600 cursor-not-allowed' : 'bg-black hover:bg-gray-800'} 
                     transition duration-200`}
         >
           {isSubmitting ? (
