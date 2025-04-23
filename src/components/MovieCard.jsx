@@ -1,33 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { fetchMoviePoster } from "../api/fetchPoster";
+import React from "react";
 
-const MovieCard = ({ title, year, onClick }) => {
-  const [poster, setPoster] = useState("");
-
-  useEffect(() => {
-    const getPoster = async () => {
-      const posterUrl = await fetchMoviePoster(title);
-      setPoster(posterUrl);
-    };
-    getPoster();
-  }, [title]);
+const MovieCard = ({ title, description, poster }) => {
+  const fallback = "/fallback-poster.jpg";
 
   return (
-    <div
-      className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden cursor-pointer w-full max-w-sm"
-      onClick={onClick}
-    >
+    <div className="bg-white shadow-md rounded-xl overflow-hidden w-80">
       <img
-        src={poster}
+        src={poster || fallback}
+        onError={(e) => (e.target.src = fallback)}
         alt={title}
-        className="w-full h-72 object-cover"
-        onError={(e) =>
-          (e.target.src = "https://via.placeholder.com/300x450?text=No+Image")
-        }
+        className="w-full h-48 object-cover"
       />
       <div className="p-4">
-        <h3 className="text-lg font-bold text-gray-800">{title}</h3>
-        {year && <p className="text-sm text-gray-500 mt-1">Released: {year}</p>}
+        <h2 className="text-xl font-semibold">{title}</h2>
+        <p className="text-gray-600 text-sm mt-2">{description}</p>
       </div>
     </div>
   );
