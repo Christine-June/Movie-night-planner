@@ -19,7 +19,7 @@ A simple yet unique app that helps you plan and schedule your movie night. With 
 
 ### 🚀 Live Demo:
 Check out the live version of the app on Vercel:  
-[Movie Night Planner on Vercel](YOUR_VERCEL_URL_HERE)
+[Movie Night Planner on Vercel](https://movie-night-planner-eosin.vercel.app/)
 
 ---
 
@@ -41,4 +41,9 @@ Check out the live version of the app on Vercel:
 - **Notification Alerts**: Stay notified when your movie is scheduled.
 
 ---
+
+©️ 2025 Invictus Movie App
+
+
+
 
