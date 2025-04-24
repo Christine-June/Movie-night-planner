@@ -5,15 +5,17 @@ const Home = () => {
     <div
       className="bg-cover bg-center min-h-screen flex flex-col justify-center items-center text-center text-white"
       style={{
-        backgroundImage: "url('src/Assets/Gladiator.jpeg')", // Replace with your image URL
+        backgroundImage: "url('/Gladiator.jpeg')",
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundColor: '#000033', // Fallback color  
+        backgroundColor: '#000033',
         backgroundAttachment: 'fixed',
       }}
     >
       <div className="bg-black bg-opacity-50 p-6 rounded-lg">
-        <h1 className="text-5xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">Welcome to Movie Night Planner</h1>
+        <h1 className="text-5xl font-extrabold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+          Welcome to Movie Night Planner
+        </h1>
         <p className="text-xl mb-6 animate__animated animate__fadeIn animate__delay-2s">
           Your one-stop app to schedule and plan your perfect movie nights with friends and family.
         </p>
