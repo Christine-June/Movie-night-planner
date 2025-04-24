@@ -5,7 +5,7 @@ const Schedule = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3001/movies')
+    fetch('http://localhost:3000/movies')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch movies');
         return res.json();

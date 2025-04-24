@@ -27,7 +27,7 @@ const AddMovieForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('http://localhost:3001/movies', {
+      const response = await fetch('http://localhost:3000/movies', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
