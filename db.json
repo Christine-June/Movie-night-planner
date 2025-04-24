@@ -41,6 +41,30 @@
       "genre": "scifi",
       "time": "17:30",
       "id": 7
+    },
+    {
+      "title": "Joker",
+      "genre": "SciFi",
+      "time": "01:24",
+      "id": 8
+    },
+    {
+      "title": "Interstellar",
+      "genre": "SciFi",
+      "time": "01:25",
+      "id": 9
+    },
+    {
+      "title": "Invictus",
+      "genre": "Fantasy",
+      "time": "14:30",
+      "id": 10
+    },
+    {
+      "title": "Equalizer",
+      "genre": "Action",
+      "time": "15:30",
+      "id": 11
     }
   ]
 }
