@@ -7,7 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
  * Includes links to "Home", "Add Movie", and "Schedule".
  * Uses Tailwind CSS for styling and is optimized for both desktop and mobile views.
  */
-function Navbar() {
+function NavBar() {
   // State for managing the visibility of the mobile menu
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +27,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="bg-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo or Brand Name */}
@@ -131,4 +131,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;

@@ -1,12 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/NavBar';
-import RoutesConfig from './components/Routes';
+import RoutesConfig from './Routes';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-50">
+      <div className="flex flex-col min-h-screen bg-gradient-to-r from-[#0CBABA] to-[#380036]">
         <header className="sticky top-0 z-50 bg-white shadow-sm">
           <Navbar />
         </header>
@@ -15,7 +15,7 @@ function App() {
           <RoutesConfig />
         </main>
 
-        <footer className="bg-gray-800 text-white text-center py-4">
+        <footer className="bg-slate-950 text-white text-center py-4">
           <p className="text-sm">&copy; 2025 Invictus Movie App</p>
         </footer>
 
