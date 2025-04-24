@@ -1,4 +1,4 @@
-const movieList = [
+const MovieList = [
     "The Shawshank Redemption",
     "The Godfather",
     "The Dark Knight",
@@ -104,5 +104,5 @@ const movieList = [
     "The Last Duel",
   ];
   
-  export default movieList;
+  export default MovieList;
   
