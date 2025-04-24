@@ -42,7 +42,7 @@ Check out the live version of the app on Vercel:
 
 ---
 
-©️ 2025 Invictus Movie App
+©️ 2025 Invictus Group 2 Movie App
 
 
 
