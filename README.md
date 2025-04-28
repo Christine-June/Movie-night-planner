@@ -15,11 +15,11 @@ A simple yet unique app that helps you plan and schedule your movie night. With 
 ---
 
 ### 📸 Screenshot
-![App Screenshot](App-Screenshot.png)
+![App Screenshot](src/Assets/Screenshot-app.png)
 
 ### 🚀 Live Demo:
 Check out the live version of the app on Vercel:  
-[Movie Night Planner on Vercel](https://movie-night-planner-eosin.vercel.app/)
+[Movie Night Planner on Vercel]()
 
 ---
 

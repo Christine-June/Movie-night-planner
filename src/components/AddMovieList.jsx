@@ -103,6 +103,5 @@ const MovieList = [
     "Glass Onion",
     "The Last Duel",
   ];
-  
-  export default MovieList;
-  
+
+export default MovieList;

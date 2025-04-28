@@ -1,17 +1,15 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import Navbar from './components/NavBar';
-import RoutesConfig from './Routes';
+import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import NavBar from "./components/NavBar.jsx";
+import RoutesConfig from "./Routes.jsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gradient-to-r from-[#0CBABA] to-[#380036]">
-        <header className="sticky top-0 z-50 bg-white shadow-sm">
-          <Navbar />
-        </header>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <NavBar />
 
-        <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="flex-1">
           <RoutesConfig />
         </main>
 
@@ -20,22 +18,27 @@ function App() {
         </footer>
 
         <Toaster
-          position="top-right"
+          position="top-center"
           toastOptions={{
-            duration: 3000,
+            duration: 4000,
             style: {
-              background: '#fff',
-              color: '#333',
-              border: '1px solid #e5e7eb',
+              background: "#1e293b",
+              color: "#fff",
+              border: "1px solid #334155",
+              padding: "16px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)",
             },
             success: {
-              style: {
-                borderColor: '#10b981',
+              iconTheme: {
+                primary: "#10b981",
+                secondary: "#fff",
               },
             },
             error: {
-              style: {
-                borderColor: '#ef4444',
+              iconTheme: {
+                primary: "#ef4444",
+                secondary: "#fff",
               },
             },
           }}
