@@ -19,7 +19,7 @@ A simple yet unique app that helps you plan and schedule your movie night. With 
 
 ### 🚀 Live Demo:
 Check out the live version of the app on Vercel:  
-[Movie Night Planner on Vercel](https://vercel.com/christine-junes-projects/movie-night-planner))
+[Movie Night Planner on Vercel](https://movie-night-planner-eosin.vercel.app)
 
 ---
 
